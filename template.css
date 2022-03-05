@@ -1,0 +1,585 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: rgb(206, 203, 203);
+    background-image: linear-gradient(to right, rgb(206, 203, 203) , rgb(83, 88, 95)); 
+    font-family: 'Roboto', sans-serif; 
+    font-size: 15px;
+}
+
+:root{
+    --font1: 'Bebas Neue', cursive;
+    --color: #ffffff;
+    --color2: #000000;
+    --shadow: 1px 2px 0.1px rgba(255, 255, 255, 0.925); 
+    --shadow2: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+
+/* Header CSS */
+.header {
+    background: rgb(192, 191, 191);
+    color: #000000;
+    font-family: var(--font1);
+    font-size: 18px;
+    padding-top: 10%;
+    padding-bottom: 1%;
+    position: relative;
+}
+
+.header:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    opacity: 0.4;
+    animation: animatebackground 10s linear infinite;
+    -webkit-animation: animatebackground 10s linear infinite;
+    -ms-animation: animatebackground 10s linear infinite;
+    -moz-animation: animatebackground 10s linear infinite;
+}
+
+@keyframes animatebackground {
+    from {background-position: 0 0;}
+    to {background-position: -70px 0;}
+}
+
+@-webkit-keyframes animatebackground {
+    from {background-position: 0 0;}
+    to {background-position: -70px 0;}
+}
+
+@-ms-keyframes animatebackground {
+    from {background-position: 0 0;}
+    to {background-position: -70px 0;}
+}
+
+@-moz-keyframes animatebackground {
+    from {background-position: 0 0;}
+    to {background-position: -70px 0;}
+}
+
+.contents {
+    position: relative;
+}
+  
+.responsive {
+    width:100%; 
+    height: auto;
+}
+
+.profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#icons{
+    display: flex; 
+    margin-left: 39%;
+    width: 25%;
+}
+
+@media screen and (max-width: 1000px) {
+    #icons{
+        margin-left: 29%;
+    }
+}
+
+.icon{
+    float: center; 
+    width: 55px; 
+    height: 55px; 
+}
+
+.icon:hover{
+    opacity:0.5; 
+}
+
+.imgcol{ 
+    color: var(--color);
+    height: 10%;
+    flex: 25%; 
+} 
+
+
+.typewriter-effect {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+}
+  
+.typewriter-effect .text {
+    max-width: 0;
+    animation: typing 3s steps(var(--characters)) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+  
+.typewriter-effect:after {
+    content: " |";
+    animation: blink 1s infinite;
+    animation-timing-function: step-end;
+}
+  
+@keyframes typing {
+    75%,
+    100% {
+        max-width: calc(var(--characters) * 1ch);
+    }
+}
+  
+@keyframes blink {
+    0%,75%,100% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+}
+/* End of header CSS  */
+
+/* Sectional CSS  */
+article{
+    text-align: center; 
+    margin: 0.5% 0% 0.5% 0%; 
+    padding: 0.5% 4% 3% 4%; 
+}
+/* End of sectional CSS */
+
+/* Navigation bar CSS */
+.navigation {
+    overflow: hidden;
+    background-color: rgba(230, 228, 228, 0.938);
+    font-family: var(--font1);
+    justify-content: space-between;
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    border-bottom-left-radius: 5%; 
+    border-bottom-right-radius: 5%;
+    z-index: 1;
+    -moz-box-shadow: 0 3px 10px #888888;
+    -webkit-box-shadow: 0 3px 10px #888888;
+    box-shadow: 0 3px 10px #888888;
+}
+
+.navigation img{
+    float:left;
+}
+
+.navigation a {
+    float: left;
+    font-size: 20px;
+    color: #4e4c4c;
+    text-align: center;
+    padding: 3.5% 1% 3.5% 1%; 
+    text-decoration: none; 
+    font-size: 25px; 
+}
+
+.navigation a:hover, .dropdown:hover .dropdown-button {
+    background-color: #ddd;
+}
+
+.left-navigation {
+    width: 20%; 
+    margin-left: 3%;
+}
+
+.right-navigation {
+    margin-left: 10%; 
+    width: 80%; 
+}
+/* End of navigation bar CSS */
+
+/* Download button  */
+.download {
+    background-color: var(--color2);
+    color: var(--color);
+    padding: 1% 1.5% 1% 1.5%; 
+    margin: 0.5% 40% 0.5% 45%; 
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: var(--font1);
+}
+
+.download:hover{
+    opacity:0.2; 
+}
+/* End of download button  */
+
+/* Skills bar  */
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.container ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container ul li{
+    float:left;
+    list-style: none;
+    width:22.5%;
+    height:300px;
+    margin: 0.5% 1% 0.5% 1%;  
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.container ul li .bottom{
+    width: 100%;
+    height:50px;
+    text-align: center;
+    color:var(--color2);
+    font-size: 17px;
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
+.flip-cart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: var(--shadow2);
+}
+
+.image img{
+    cursor: pointer;
+}
+
+.container:hover .flip-cart {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; 
+}
+
+.front {
+    background-color: var(--color);
+    color: var(--color2);
+    border-radius: 10px;
+}
+
+.back {
+    background-color: rgba(212, 211, 211, 0.938);
+    transform: rotateY(180deg);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.front .front-align{
+    margin-top: 30%; 
+}
+
+.bottom{
+    margin-bottom: 20%;
+    font-family: var(--font1);
+}
+
+@media screen and (max-width:1250px){
+    .container ul li{
+    width:50%;
+    margin-left: 25%;
+}
+}
+/* End of skills bar  */
+
+/* Experience CSS */
+.timeline {
+    position: relative;
+    max-width: 100%; 
+    display: flex; 
+}
+
+.column1, .column2{
+    width: 50%; 
+}
+
+.column1 {
+    border-right: 5px solid #ececec;
+}
+
+.container-left{
+    background-color: var(--color);
+    padding: 15px; 
+    box-shadow: var(--shadow2);
+    border-radius: 15px;
+    width: 80%; 
+    height: 100%; 
+    display: inline-block;
+}
+
+.container-left:hover{
+    transform: scale(1.1);
+    transition: ease 1s;
+}
+
+.container-left:after {
+    left: 44.5%; 
+	top: 20%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-left-color: var(--color);
+	border-width: 20px;
+}
+
+.container-right{
+    background-color: rgb(253, 253, 253);
+    padding: 15px; 
+    box-shadow: var(--shadow2);
+    border-radius: 15px;
+    width: 80%; 
+    height: 100%; 
+    display: inline-block;
+}
+
+.container-right:hover{
+    transform: scale(1.1);
+    transition: ease 1s;
+}
+
+.container-right:after {
+    right: 44.5%; 
+	top: 20%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-right-color: var(--color);
+	border-width: 20px;
+}
+
+#div1 {
+    width:60%;
+    float:left;
+    font-weight: bold;
+    text-align: left; 
+    font-size: 20px;
+    height: 20px; 
+    font-family: var(--font1);
+    letter-spacing: 0.7px;
+}
+
+#div2 {
+    width:40%;
+    float:left;
+    text-align: right; 
+    font-style: italic;
+    height: 20px; 
+    margin-top: 2%; 
+}
+
+#div3 {
+    margin-top: 3%;
+    text-align: left; 
+    height: 35px; 
+}
+
+#div4 {
+    text-align: left; 
+}
+
+/* End of experience CSS */
+
+/* Education CSS */
+.container2{
+    background-color: var(--color);
+    padding: 3%; 
+    margin: 1%; 
+    box-shadow: var(--shadow2);
+    border-radius: 15px;
+    width: 60%; 
+    height: 100%; 
+    display: inline-block;
+}
+
+.container2:hover{
+    transform: scale(1.1);
+    transition: ease 1s;
+}
+
+.container2 #div1{
+   width: 70%; 
+}
+
+.container2 #div2{
+    width: 30%; 
+}
+/* End of education CSS */
+
+/*Responsive CSS for experience & education*/  
+@media screen and (max-width: 1000px) {
+    #div1, #div2 {
+        width: 100%;
+        height:5%; 
+    }
+
+    .container2 #div1, .container2 #div2{
+        width: 100%; 
+    }
+
+    #div2{
+        text-align: left;
+        margin-top: 20px; 
+        margin-bottom: 10px; 
+    }
+
+    #div3 {
+        margin-top: 30px; 
+        margin-bottom: 10px; 
+    }
+
+    .container2 #div3 {
+        margin-top: 50px;  
+    }
+
+    #div4 {
+        margin-top: 30px; 
+        margin-bottom: 20px; 
+    }
+}
+/*End of responsive CSS for experience & education*/  
+
+/* Scroll up button CSS  */
+.scroll_up {
+    background-color: #253d4e;
+    width: 70px;
+    height: 70px;
+    z-index: 2; 
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    position: fixed;
+    right: 5%; 
+    bottom: 5%; 
+}
+
+.scroll_up:hover {
+    background-color: #3a5669;
+}
+/* End of scroll up button CSS  */
+
+/* Button CSS */
+.button {
+    background-color: var(--color2);
+    color:var(--color); 
+    padding: 1% 1.5% 1% 1.5%; 
+    margin: 1% 0.5% 0.5% 70%; 
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: var(--font1);
+}
+
+.button:hover{
+    opacity:0.2; 
+}
+
+.button-top {
+    background-color: var(--color2);
+    color:var(--color); 
+    padding: 1% 1.5% 1% 1.5%; 
+    margin: 0.5% 0.5% 0.5% 80%; 
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: var(--font1);
+}
+
+.button-top:hover{
+    opacity:0.2; 
+}
+/* End of button  */
+
+/* Footer CSS */
+#foot{ 
+    background-color: var(--color2); 
+    color: #afaaaa;
+    text-align: justify;
+    font-size: 14px;
+    padding: 2% 0.5% 2% 0.5%; 
+} 
+/* End of footer CSS  */
+
+/* Font CSS  */
+h1{
+    text-align: center; 
+    font-weight: bold;
+    font-size: 35px; 
+    font-family: var(--font1);
+    text-shadow: var(--shadow); 
+}
+
+p{
+    font-size: 18px; 
+}
+
+p.center {
+    text-align: center;
+    line-height: 0.4;
+    font-family: var(--font1);
+    font-size: 50px;
+    margin-bottom: 20px; 
+}
+
+a {
+    color: var(--color); 
+    text-decoration: none; 
+}
+
+.foot {
+    text-align: center;
+    font-family: var(--font1);
+}
+
+.bottom p {
+    font-size: 22px;
+    color: #23282b;
+    font-family: var(--font1);
+}
+
+.front-align p{
+    font-size: 22px;
+    color: #23282b;
+    font-family: var(--font1);
+}
+
+.glitch{
+    animation: glitching 1s infinite;
+}
+
+@keyframes glitching{
+    2%,64%{
+      transform: translate(10px,0px);
+    }
+} 
+/* End of font CSS  */
