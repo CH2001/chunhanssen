@@ -11,10 +11,10 @@ html, body {
     font-size: 15px;
 }
 
-:root{
+:root {
     --font1: 'Bebas Neue', cursive;
-    --color: #ffffff;
-    --color2: #000000;
+    --color: rgb(255,255,255);
+    --color2: rgb(0,0,0);
     --shadow: 1px 2px 0.1px rgba(255, 255, 255, 0.925); 
     --shadow2: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
 }
@@ -22,7 +22,7 @@ html, body {
 /* Header CSS */
 .header {
     background: rgb(192, 191, 191);
-    color: #000000;
+    color: rgb(0,0,0);
     font-family: var(--font1);
     font-size: 18px;
     padding-top: 10%;
@@ -84,34 +84,27 @@ html, body {
     margin-right: auto;
 }
 
-#icons{
+#icons {
     display: flex; 
     margin-left: 39%;
     width: 25%;
 }
 
-@media screen and (max-width: 1000px) {
-    #icons{
-        margin-left: 29%;
-    }
-}
-
-.icon{
+.icon {
     float: center; 
     width: 55px; 
     height: 55px; 
 }
 
-.icon:hover{
+.icon:hover {
     opacity:0.5; 
 }
 
-.imgcol{ 
+.imgcol { 
     color: var(--color);
     height: 10%;
     flex: 25%; 
 } 
-
 
 .typewriter-effect {
     display: flex;
@@ -133,8 +126,7 @@ html, body {
 }
   
 @keyframes typing {
-    75%,
-    100% {
+    75%, 100% {
         max-width: calc(var(--characters) * 1ch);
     }
 }
@@ -169,19 +161,19 @@ article{
     border-bottom-left-radius: 5%; 
     border-bottom-right-radius: 5%;
     z-index: 1;
-    -moz-box-shadow: 0 3px 10px #888888;
-    -webkit-box-shadow: 0 3px 10px #888888;
-    box-shadow: 0 3px 10px #888888;
+    -moz-box-shadow: 0 3px 10px rgb(136, 136, 136);
+    -webkit-box-shadow: 0 3px 10px rgb(136, 136, 136);
+    box-shadow: 0 3px 10px rgb(136, 136, 136);
 }
 
-.navigation img{
+.navigation img {
     float:left;
 }
 
 .navigation a {
     float: left;
     font-size: 20px;
-    color: #4e4c4c;
+    color: rgb(78, 76, 76);
     text-align: center;
     padding: 3.5% 1% 3.5% 1%; 
     text-decoration: none; 
@@ -189,7 +181,7 @@ article{
 }
 
 .navigation a:hover, .dropdown:hover .dropdown-button {
-    background-color: #ddd;
+    background-color: rgb(221, 221, 221);
 }
 
 .left-navigation {
@@ -215,25 +207,25 @@ article{
     font-family: var(--font1);
 }
 
-.download:hover{
+.download:hover {
     opacity:0.2; 
 }
 /* End of download button  */
 
 /* Skills bar  */
-.container{
+.container {
     width: 90%;
     margin: auto;
     overflow: hidden;
     margin-top: 20px;
 }
 
-.container ul{
+.container ul {
     padding: 0px;
     margin: 0px;
 }
 
-.container ul li{
+.container ul li {
     float:left;
     list-style: none;
     width:22.5%;
@@ -243,7 +235,7 @@ article{
     border-radius: 2px;
 }
 
-.container ul li .bottom{
+.container ul li .bottom {
     width: 100%;
     height:50px;
     text-align: center;
@@ -263,7 +255,7 @@ article{
     box-shadow: var(--shadow2);
 }
 
-.image img{
+.image img {
     cursor: pointer;
 }
 
@@ -292,21 +284,15 @@ article{
     border-radius: 10px;
 }
 
-.front .front-align{
+.front .front-align {
     margin-top: 30%; 
 }
 
-.bottom{
+.bottom {
     margin-bottom: 20%;
     font-family: var(--font1);
 }
 
-@media screen and (max-width:1250px){
-    .container ul li{
-    width:50%;
-    margin-left: 25%;
-}
-}
 /* End of skills bar  */
 
 /* Experience CSS */
@@ -316,15 +302,15 @@ article{
     display: flex; 
 }
 
-.column1, .column2{
+.column1, .column2 {
     width: 50%; 
 }
 
 .column1 {
-    border-right: 5px solid #ececec;
+    border-right: 5px solid rgb(236, 236, 236);
 }
 
-.container-left{
+.container-left {
     background-color: var(--color);
     padding: 15px; 
     box-shadow: var(--shadow2);
@@ -334,7 +320,7 @@ article{
     display: inline-block;
 }
 
-.container-left:hover{
+.container-left:hover {
     transform: scale(1.1);
     transition: ease 1s;
 }
@@ -351,7 +337,7 @@ article{
 	border-width: 20px;
 }
 
-.container-right{
+.container-right {
     background-color: rgb(253, 253, 253);
     padding: 15px; 
     box-shadow: var(--shadow2);
@@ -361,7 +347,7 @@ article{
     display: inline-block;
 }
 
-.container-right:hover{
+.container-right:hover {
     transform: scale(1.1);
     transition: ease 1s;
 }
@@ -411,7 +397,7 @@ article{
 /* End of experience CSS */
 
 /* Education CSS */
-.container2{
+.container2 {
     background-color: var(--color);
     padding: 3%; 
     margin: 1%; 
@@ -422,56 +408,23 @@ article{
     display: inline-block;
 }
 
-.container2:hover{
+.container2:hover {
     transform: scale(1.1);
     transition: ease 1s;
 }
 
-.container2 #div1{
+.container2 #div1 {
    width: 70%; 
 }
 
-.container2 #div2{
+.container2 #div2 {
     width: 30%; 
 }
 /* End of education CSS */
 
-/*Responsive CSS for experience & education*/  
-@media screen and (max-width: 1000px) {
-    #div1, #div2 {
-        width: 100%;
-        height:5%; 
-    }
-
-    .container2 #div1, .container2 #div2{
-        width: 100%; 
-    }
-
-    #div2{
-        text-align: left;
-        margin-top: 20px; 
-        margin-bottom: 10px; 
-    }
-
-    #div3 {
-        margin-top: 30px; 
-        margin-bottom: 10px; 
-    }
-
-    .container2 #div3 {
-        margin-top: 50px;  
-    }
-
-    #div4 {
-        margin-top: 30px; 
-        margin-bottom: 20px; 
-    }
-}
-/*End of responsive CSS for experience & education*/  
-
 /* Scroll up button CSS  */
 .scroll_up {
-    background-color: #253d4e;
+    background-color: rgb(37, 61, 78);
     width: 70px;
     height: 70px;
     z-index: 2; 
@@ -484,7 +437,7 @@ article{
 }
 
 .scroll_up:hover {
-    background-color: #3a5669;
+    background-color: rgb(58, 86, 105);
 }
 /* End of scroll up button CSS  */
 
@@ -500,7 +453,7 @@ article{
     font-family: var(--font1);
 }
 
-.button:hover{
+.button:hover {
     opacity:0.2; 
 }
 
@@ -515,13 +468,13 @@ article{
     font-family: var(--font1);
 }
 
-.button-top:hover{
+.button-top:hover {
     opacity:0.2; 
 }
 /* End of button  */
 
 /* Footer CSS */
-#foot{ 
+#foot { 
     background-color: var(--color2); 
     color: #afaaaa;
     text-align: justify;
@@ -531,7 +484,7 @@ article{
 /* End of footer CSS  */
 
 /* Font CSS  */
-h1{
+h1 {
     text-align: center; 
     font-weight: bold;
     font-size: 35px; 
@@ -539,7 +492,19 @@ h1{
     text-shadow: var(--shadow); 
 }
 
-p{
+h1:hover{
+    font-size: 37px; 
+}
+
+:target {
+    scroll-margin-top: 100px;
+}
+
+:target h1 {
+    color:rgb(46, 47, 53);
+}
+
+p {
     font-size: 18px; 
 }
 
@@ -563,23 +528,73 @@ a {
 
 .bottom p {
     font-size: 22px;
-    color: #23282b;
+    color: rgb(35, 40, 43);
     font-family: var(--font1);
 }
 
-.front-align p{
+.front-align p {
     font-size: 22px;
-    color: #23282b;
+    color: rgb(35, 40, 43);
     font-family: var(--font1);
 }
 
-.glitch{
+.glitch {
     animation: glitching 1s infinite;
 }
 
-@keyframes glitching{
+@keyframes glitching {
     2%,64%{
       transform: translate(10px,0px);
     }
 } 
 /* End of font CSS  */
+
+/*Responsive CSS for smaller device*/  
+@media screen and (max-width: 1000px) {
+    #icons {
+        margin-left: 29%;
+    }
+
+    .header {
+        padding-top: 25%;
+    }
+
+    .navigation a {
+        font-size: 20px; 
+    }
+
+    .container ul li {
+       width:50%;
+       margin-left: 25%;
+    }
+
+    #div1, #div2 {
+        width: 100%;
+        height:5%; 
+    }
+
+    .container2 #div1, .container2 #div2 {
+        width: 100%; 
+    }
+
+    #div2 {
+        text-align: left;
+        margin-top: 20px; 
+        margin-bottom: 10px; 
+    }
+
+    #div3 {
+        margin-top: 30px; 
+        margin-bottom: 10px; 
+    }
+
+    .container2 #div3 {
+        margin-top: 50px;  
+    }
+
+    #div4 {
+        margin-top: 30px; 
+        margin-bottom: 20px; 
+    }
+}
+/*Responsive CSS for smaller device*/  
